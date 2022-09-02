@@ -1,0 +1,14 @@
+{
+  "name": "thoughts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Dominik Hofman",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^20.1.1"
+  }
+}
