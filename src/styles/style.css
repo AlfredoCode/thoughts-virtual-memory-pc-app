@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
 
 :root{
     --titleBarHeight: 30px;
     --clr-shadow: #131313;
     --font-primary:'Raleway', sans-serif;
+    --font-buttons: 'Ubuntu', sans-serif;
     --clr-icon-hover:#383838;
+    --clr-panels: #191919;
+    --clr-iconic:rgb(179, 179, 179);
+    --clr-thought-bg:#282828;
 }
 
 *{
@@ -12,7 +16,7 @@
 }
 
 body{
-    background-color: #a8b8ff;
+    background-color: var(--clr-thought-bg);
     margin:0;
     overflow:hidden;
 }
@@ -28,7 +32,7 @@ body{
     height:100vh;
 }
 .thoughts-list{
-    background-color: #191919;
+    background-color: var(--clr-panels);
     height:calc(100% - var(--titleBarHeight));
     box-shadow: 1px 0 5px var(--clr-shadow);
     display:flex;
@@ -61,4 +65,8 @@ body{
     0 0 50px rgb(155, 170, 255);
     margin-left:60px;
     transform:scale(1.1);
+}
+.thoughts-prev{
+    position:relative;
+    overflow:hidden;
 }

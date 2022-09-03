@@ -7,7 +7,7 @@ createWindow = function () {
         width: 1280,
         height: 720,
         minHeight: 480,
-        minWidth: 640,
+        minWidth: 900,
         frame: false,
         autoHideMenuBar: true,
         title: "Thoughts",

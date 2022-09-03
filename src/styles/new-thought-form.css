@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+.new-thought-form {
+    width: 250px;
+    height: 250px;
+    background-color: var(--clr-panels);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom:50px;
+    margin:auto;
+    border-radius:10px;
+    display:flex;
+    flex-direction: column;
+    font-family:var(--font-primary);
+    align-items: center;
+    box-shadow: 0 0 500px #0e54d5;
+}
+.new-thought-form span{
+    color: white;
+    font-weight:300;
+    padding: 10px;
+    text-align: center;
+}
+.new-thought-header{
+    background-image: linear-gradient(to left, rgb(0, 68, 255), rgb(68, 47, 255));
+    border-radius: 0  0 10px 10px;
+    text-shadow: 0 0 5px white;
+}
+.name-info{
+    font-size:10px;
+    text-align: left !important;
+    padding:2px !important;
+    font-style: italic;
+    margin-left:10px;
+    font-family: var(--font-buttons);
+}
+.name-container{
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width:80%;
+    position:relative;
+    margin-top:30px;
+    margin-bottom:50px;
+}
+input.thought-name{
+    outline:none;
+    border-radius:20px;
+    padding:10px 15px;
+    font-family: var(--font-buttons);
+    border: none;
+    font-weight: 300;
+    font-size:16px;
+}
+
+.btn-submit-thought{
+    outline: none;
+    border:none;
+    border-radius:20px;
+    /* height:40px; */
+    font-weight: 400;
+    bottom:0;
+    font-family: var(--font-buttons);
+    padding: 15px 10px;
+    color:white;
+    background-image: linear-gradient(to right, rgb(0, 68, 255), rgb(68, 47, 255));
+    box-shadow:0 0 5px var(--clr-shadow);
+    transition: all 0.2s ease;
+}
+.btn-submit-thought:hover{
+    box-shadow:0 0 5px var(--clr-shadow),
+                0 0 20px rgb(0, 68, 255);
+    cursor: pointer;
+  
+}

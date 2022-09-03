@@ -14,7 +14,7 @@
 }
 .left-section i,
  .right-section i{
-    color:rgb(179, 179, 179);
+    color: var(--clr-iconic);
     font-size:1.25em;
     padding:3px 10px;
     border-radius: 10px;
