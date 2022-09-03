@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap');
+
 :root{
     --titleBarHeight: 30px;
     --clr-shadow: #131313;
+    --font-primary:'Raleway', sans-serif;
+    --clr-icon-hover:#383838;
 }
 
 *{
@@ -8,7 +12,7 @@
 }
 
 body{
-    background-color: #a8ffb8;
+    background-color: #a8b8ff;
     margin:0;
     overflow:hidden;
 }
@@ -17,13 +21,7 @@ body{
     min-width:100vw;
     min-height:100vh;
 }
-.titleBar{
-    width:100vw;
-    height:var(--titleBarHeight);
-    background-color: #131313;
-    -webkit-app-region: drag;
-    /* position:absolute; */
-}
+
 .grid-container{
     display:grid;
     grid-template-columns: 300px 2fr;
@@ -44,9 +42,9 @@ body{
 .item{
     height:70px;
     width:200px;
-    background-color: rgb(202, 255, 155);
+    background-color: rgb(155, 170, 255);
     box-shadow:0 1px 5px var(--clr-shadow),
-                0 0 5px rgb(202, 255, 155);
+                0 0 5px rgb(155, 170, 255);
     border-radius:20px;
     flex-shrink:0;
     transition: all 0.2s ease;
@@ -54,13 +52,13 @@ body{
 }
 .item:hover{
     box-shadow:0 1px 5px var(--clr-shadow),
-                0 0 50px rgb(202, 255, 155);
+                0 0 50px rgb(155, 170, 255);
     cursor:pointer;
     transform:scale(1.1);
 }
 .item-active{
     box-shadow:0 1px 5px var(--clr-shadow),
-    0 0 50px rgb(202, 255, 155);
+    0 0 50px rgb(155, 170, 255);
     margin-left:60px;
     transform:scale(1.1);
 }

@@ -1,0 +1,60 @@
+.titleBar{
+    width:100vw;
+    height:var(--titleBarHeight);
+    background-color: #131313;
+    /* -webkit-app-region: drag; */
+    /* position:absolute; */
+    display:grid;
+    grid-template-columns: 300px 3fr 150px;
+}
+.titleBar .left-section{
+    /* background-color: orange; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.left-section i,
+ .right-section i{
+    color:rgb(179, 179, 179);
+    font-size:1.25em;
+    padding:3px 10px;
+    border-radius: 10px;
+    transition:all 0.2s ease;
+
+}
+.left-section i:hover,
+.right-section i:hover{
+    color:white;
+    background-color: #383838;
+    cursor:pointer;
+}
+
+.add-new-thought i{
+    color:rgb(105, 204, 92);    
+}
+.add-new-thought i:hover{
+    background-color: var(--clr-icon-hover);
+    color:rgb(89, 231, 71);  
+
+}
+
+
+
+
+
+.titleBar .middle-section{
+    /* background-color: darkblue; */
+    color:white;
+    font-family:var(--font-primary);
+    font-weight:200;
+    background-color: var(--clr-icon-hover);
+    border-radius:20px;
+    margin:5px 0;
+}
+.titleBar .right-section{
+    /* background-color: darkcyan; */
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.btn-close i:hover{
+    background-color: crimson;
+}

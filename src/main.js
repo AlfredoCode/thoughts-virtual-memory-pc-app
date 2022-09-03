@@ -2,20 +2,27 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const srcPath = './src/';
 
-createWindow = function(){
+createWindow = function () {
     win = new BrowserWindow({
         width: 1280,
-        height:720,
-        minHeight:480,
-        minWidth:640,
+        height: 720,
+        minHeight: 480,
+        minWidth: 640,
         frame: false,
-        autoHideMenuBar:true,
+        autoHideMenuBar: true,
+        title: "Thoughts",
     });
-    win.loadFile(srcPath + 'index.html')   
+    win.loadFile(srcPath + 'index.html')
+    
     win.openDevTools({ mode: 'detach' })
 }
 
 
 app.whenReady().then(() => {
     createWindow()
-  })
+})
+
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') app.quit()
+})
