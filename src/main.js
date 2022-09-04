@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const srcPath = './src/';
+const imgPath = srcPath + 'img/';
 
 createWindow = function () {
     win = new BrowserWindow({
@@ -11,9 +12,10 @@ createWindow = function () {
         frame: false,
         autoHideMenuBar: true,
         title: "Thoughts",
+        icon: imgPath + 'thoughts.png'
     });
     win.loadFile(srcPath + 'index.html')
-    
+    // console.log(imgPath + 'thoughts.png')
     win.openDevTools({ mode: 'detach' })
 }
 
