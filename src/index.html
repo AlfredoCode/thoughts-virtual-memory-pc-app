@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,17 +15,19 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
-<body>
+
+<body onload="load()">
     <div class="wrapper">
         <div class="titleBar drag">
             <div class="left-section">
                 <div class="btn-settings flex">
-                    <i class='bx bxs-cog no-drag'></i>                </div>
+                    <i class='bx bxs-cog no-drag'></i>
+                </div>
                 <div class="btn-theme flex">
-                    <i class='bx bxs-moon no-drag'></i> 
+                    <i class='bx bxs-moon no-drag'></i>
                 </div>
                 <div class="add-new-thought flex">
-                    <i class='bx bxs-message-square-add no-drag' ></i>
+                    <i class='bx bxs-message-square-add no-drag'></i>
                 </div>
             </div>
             <div class="middle-section flex">
@@ -35,7 +38,7 @@
                     <i class='bx bx-minus no-drag'></i>
                 </div>
                 <div class="btn-maximize flex">
-                    <i class='bx bx-windows no-drag' ></i>
+                    <i class='bx bx-windows no-drag'></i>
                 </div>
                 <div class="btn-close flex">
                     <i class='bx bx-x no-drag'></i>
@@ -44,8 +47,8 @@
         </div>
         <div class="grid-container">
             <div class="thoughts-list">
+                <!-- <div class="item"></div> 
                 <div class="item"></div>
-                <!-- <div class="item"></div>
                 <div class="item"></div>
                 <div class="item item-active"></div>
                 <div class="item item-active"></div>
@@ -62,17 +65,25 @@
             </div>
             <div class="thoughts-prev">
                 <div class="new-thought-form">
+
                     <span class="new-thought-header">ADD NEW THOUGHT</span>
+                    <div class="btn-close-new flex">
+                        <i class='bx bx-x no-drag'></i>
+                    </div>
+
                     <div class="name-container">
                         <span class="name-info">NAME</span>
                         <input type="text" class="thought-name" spellcheck="false">
                     </div>
-                    
+
                     <button class="btn-submit-thought">CREATE THOUGHT</button>
                 </div>
 
             </div>
         </div>
     </div>
+    <script src="./scripts/load.js"></script>
+    <script src="./scripts/add-thought.js"></script>
 </body>
+
 </html>

@@ -46,17 +46,29 @@ body{
 .item{
     height:70px;
     width:200px;
-    background-color: rgb(155, 170, 255);
+    background-color: rgb(98, 158, 255);
     box-shadow:0 1px 5px var(--clr-shadow),
-                0 0 5px rgb(155, 170, 255);
+                0 0 5px rgb(98, 158, 255);
     border-radius:20px;
     flex-shrink:0;
     transition: all 0.2s ease;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     
+}
+.item span{
+    font-family:var(--font-buttons);
+    font-weight: 500;
+    color:white;
+    max-width:90%;
+    max-height: 36px;
+    overflow: hidden;
+    text-align: center;
 }
 .item:hover{
     box-shadow:0 1px 5px var(--clr-shadow),
-                0 0 50px rgb(155, 170, 255);
+                0 0 50px rgb(98, 158, 255);
     cursor:pointer;
     transform:scale(1.1);
 }
