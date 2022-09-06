@@ -19,10 +19,15 @@ createWindow = function () {
             nodeIntegration: true,
             contextIsolation: false,
         },
+        show: false,
     });
     win.loadFile(srcPath + 'index.html')
     // console.log(imgPath + 'thoughts.png')
     // win.openDevTools({ mode: 'detach' })
+
+    win.once('ready-to-show', () => {
+        win.show()
+    })
 }
 
 function initStorage(){
@@ -40,6 +45,7 @@ function initStorage(){
         }
     })
 }
+
 
 
 app.whenReady().then(() => {
