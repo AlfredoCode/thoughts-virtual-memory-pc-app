@@ -29,7 +29,7 @@ function initStorage(){
     let path = app.getPath('userData');
 
     storage = new Datastore({
-        filename: path + '/thoughts.db'
+        filename: path + '/thoughts.json'
     })
     storage.loadDatabase((err) =>{
         if(err){
@@ -67,6 +67,22 @@ ipcMain.on("save_thought", (e, thought) => {
             console.log("Data inserted successfully");
         }
     })
+})
+
+ipcMain.on("app_quit", () =>{
+    app.quit();
+})
+
+ipcMain.on("window_minimize", () =>{
+    win.minimize();
+})
+
+ipcMain.on("window_maximize", () =>{
+    if(win.isMaximized()) {
+        win.unmaximize();
+    } else {
+        win.maximize();
+    }
 })
 
 
