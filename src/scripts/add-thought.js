@@ -1,7 +1,9 @@
+
+
 const addForm = document.querySelector('.new-thought-form');
 
 const input = document.querySelector('.thought-name');
-const currentDiv = document.querySelector('.thoughts-list')
+const thoughts_list = document.querySelector('.thoughts-list')
 
 const addBtn = document.querySelector('.add-new-thought');
 const submitBtn = document.querySelector('.btn-submit-thought');
@@ -34,43 +36,37 @@ input.addEventListener('keypress', function (e) {
 })
 
 
-var items = [];
 
 
 submitBtn.addEventListener('click', function (e) {
     const newDiv = document.createElement("div");
     newDiv.className = "item"
     const newSpan = document.createElement("span");
-    const text = input.value;
+    var text = input.value;
+    if(text === ""){
+        text = "Unnamed thought"
+    }
     const newContent = document.createTextNode(text);
 
     newSpan.appendChild(newContent);
     newDiv.appendChild(newSpan);
 
     
-    currentDiv.appendChild(newDiv);
+    thoughts_list.appendChild(newDiv);
     
     input.value = "";
     input.focus();
 
-    var itemName = {
-        id: items.length,
-        name: text,
-      };
-  
-    items.push(itemName);
-
-    old = localStorage.getItem('Items');
-    if(old === null){
-        old = "";
+    if(currentID != undefined){
+        currentID = currentID + 1;
+        console.log("xd")
     }
-    localStorage.setItem('Items', old + items);
-    
-    
+    const id_curr = currentID;
 
-
-
-
-
+    let _item = {
+        thought_name: text,
+        id: id_curr
+    };
+    ipcRenderer.send("save_thought", _item);
     
 })

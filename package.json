@@ -18,5 +18,8 @@
     "win": {
       "icon": "src/img/thoughts.ico"
     }
+  },
+  "dependencies": {
+    "nedb": "^1.8.0"
   }
 }
