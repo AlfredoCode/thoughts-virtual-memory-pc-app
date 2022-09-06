@@ -1,6 +1,8 @@
 const { ipcRenderer } = require("electron");
 var currentID;
 
+
+
 // const thoughts_list = document.querySelector('.thoughts-list')
 let thought_notes;
 
@@ -21,6 +23,7 @@ async function load() {
         }
 
 
+        
 
         //DISPLAY ELEMENT
         thoughts_list.innerHTML += `
@@ -30,7 +33,15 @@ async function load() {
         `
     }
 
-
+    //Empty thought list
+    if(thoughts_list.childNodes.length === 0){
+        thoughts_list.innerHTML = `
+        <div class = 'no-item-span'>
+            <span>You currently have no thoughts</span>
+        </div>
+    `  
+    noItemSpan = document.querySelector('.no-item-span');
+    }
 
 
 }

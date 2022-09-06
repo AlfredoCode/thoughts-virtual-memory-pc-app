@@ -4,6 +4,7 @@ const addForm = document.querySelector('.new-thought-form');
 
 const input = document.querySelector('.thought-name');
 const thoughts_list = document.querySelector('.thoughts-list')
+let noItemSpan;
 
 const addBtn = document.querySelector('.add-new-thought');
 const submitBtn = document.querySelector('.btn-submit-thought');
@@ -68,5 +69,9 @@ submitBtn.addEventListener('click', function (e) {
         id: id_curr
     };
     ipcRenderer.send("save_thought", _item);
+   
+    //HIDE NO-THOUGHTS SPAN
+
+    thoughts_list.removeChild(noItemSpan);
     
 })
