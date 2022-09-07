@@ -127,6 +127,7 @@ function changeColor(color) {
     });
     header.style.backgroundImage = 'var(--gradient-' + color + ')';
     addForm.style.animationName = 'shadow-'+color;
+    
 }
 
 
@@ -174,7 +175,7 @@ for (let i = 0; i < choice.length; i++) {
             green.classList.remove('color-choice-active');
             red.classList.remove('color-choice-active');
         }
+        input.focus();
     })
 }
-
 
