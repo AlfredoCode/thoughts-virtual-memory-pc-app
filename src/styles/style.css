@@ -3,12 +3,22 @@
 :root {
     --titleBarHeight: 30px;
     --clr-shadow: #131313;
+    --clr-shadow-blue: #0e54d5;
+    --clr-shadow-green: #0ed529;
+    --clr-shadow-red: #d50e43;
+    --clr-shadow-orange: #eb9c13;
     --font-primary: 'Raleway', sans-serif;
     --font-buttons: 'Ubuntu', sans-serif;
     --clr-icon-hover: #383838;
     --clr-panels: #191919;
     --clr-iconic: rgb(179, 179, 179);
     --clr-thought-bg: #282828;
+    --gradient-blue: linear-gradient(to left, rgb(0, 68, 255), rgb(68, 47, 255));
+    --gradient-red: linear-gradient(to left, rgb(255, 0, 111), rgb(255, 47, 64));
+    --gradient-green: linear-gradient(to left, rgb(36, 199, 88), rgb(36, 204, 36));
+    --gradient-orange: linear-gradient(to left, rgb(255, 153, 0), rgb(255, 134, 47));
+
+
 }
 
 * {
@@ -47,9 +57,9 @@ body {
 .item {
     height: 70px;
     width: 200px;
-    background-color: rgb(98, 158, 255);
+    background-image: var(--gradient-blue);
     box-shadow: 0 1px 5px var(--clr-shadow),
-        0 0 5px rgb(98, 158, 255);
+        0 0 5px var(--gradient-blue);
     border-radius: 20px;
     flex-shrink: 0;
     transition: all 0.2s ease;
@@ -71,7 +81,7 @@ body {
 
 .item:hover {
     box-shadow: 0 1px 5px var(--clr-shadow),
-        0 0 50px rgb(98, 158, 255);
+        0 0 50px var(--clr-shadow-blue);
     cursor: pointer;
     transform: scale(1.1);
 }

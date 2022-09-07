@@ -2,7 +2,7 @@
 
 .new-thought-form {
     width: 250px;
-    height: 250px;
+    height: 300px;
     background-color: var(--clr-panels);
     position: absolute;
     left: 0;
@@ -21,17 +21,44 @@
     /* transition: all 0.5s ease; */
 }
 .shadow-anim{
-    animation-name: shadow;
+    animation-name: shadow-blue;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
-@keyframes shadow{
+@keyframes shadow-blue{
     0%{
         box-shadow: none;
         /* visibility: visible; */
     }
     100%{
-        box-shadow: 0 0 500px #0e54d5;
+        box-shadow: 0 0 500px var(--clr-shadow-blue);
+    }
+}
+@keyframes shadow-red{
+    0%{
+        box-shadow: none;
+        /* visibility: visible; */
+    }
+    100%{
+        box-shadow: 0 0 500px var(--clr-shadow-red);
+    }
+}
+@keyframes shadow-green{
+    0%{
+        box-shadow: none;
+        /* visibility: visible; */
+    }
+    100%{
+        box-shadow: 0 0 500px var(--clr-shadow-green);
+    }
+}
+@keyframes shadow-orange{
+    0%{
+        box-shadow: none;
+        /* visibility: visible; */
+    }
+    100%{
+        box-shadow: 0 0 500px var(--clr-shadow-orange);
     }
 }
 .btn-close-new{
@@ -57,9 +84,10 @@
     text-align: center;
 }
 .new-thought-header{
-    background-image: linear-gradient(to left, rgb(0, 68, 255), rgb(68, 47, 255));
+    background-image: var(--gradient-blue);
     border-radius: 0  0 10px 10px;
-    text-shadow: 0 0 5px white;
+    font-family:var(--font-buttons);
+    font-weight: 500 !important;
 }
 .name-info{
     font-size:10px;
@@ -76,7 +104,7 @@
     width:80%;
     position:relative;
     margin-top:30px;
-    margin-bottom:50px;
+    margin-bottom:40px;
 }
 input.thought-name{
     outline:none;
@@ -93,18 +121,48 @@ input.thought-name{
     border:none;
     border-radius:20px;
     /* height:40px; */
-    font-weight: 400;
+    font-weight: 500;
     bottom:0;
     font-family: var(--font-buttons);
     padding: 15px 10px;
     color:white;
-    background-image: linear-gradient(to right, rgb(0, 68, 255), rgb(68, 47, 255));
+    background-image: var(--gradient-blue);
     box-shadow:0 0 5px var(--clr-shadow);
     transition: all 0.2s ease;
 }
 .btn-submit-thought:hover{
     box-shadow:0 0 5px var(--clr-shadow),
-                0 0 20px rgb(0, 68, 255);
+                0 0 20px var(--clr-shadow-blue);
     cursor: pointer;
   
+}
+
+.thought-color-pick{
+    display:flex;
+    flex-direction: row;
+    margin-bottom:40px;
+    gap:5px;
+}
+.color-choice{
+    height:30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.color-choice-active{
+    border: 2px solid white;
+}
+.color-choice:hover{
+    cursor: pointer;
+}
+.choice-blue{
+    background-image: var(--gradient-blue);
+}
+.choice-red{
+    background-image: var(--gradient-red);
+}
+.choice-green{
+    background-image: var(--gradient-green);
+}
+.choice-orange{
+    background-image: var(--gradient-orange);
 }
